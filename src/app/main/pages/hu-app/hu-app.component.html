@@ -1,0 +1,28 @@
+
+<div class="row gy-4 gy-md-5 gy-lg-0">
+      <div class="col-12 col-lg-12 mt-5">
+        <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Historia de usuario</th>
+                <th scope="col">Modulo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Editar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let hu of hus">
+                <td>{{hu.id}}</td>
+                <td>{{hu.description}}</td>
+                <td>{{hu.module[0].description}}</td>
+                <td><app-status [stage]="hu.status"></app-status></td>
+              </tr>
+             
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+
+
