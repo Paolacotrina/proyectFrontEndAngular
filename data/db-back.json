@@ -118,7 +118,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -126,9 +129,12 @@
                         
                 },
                 {
-                    "id":1,
+                    "id":2,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -136,9 +142,12 @@
                 },
                 {
                     
-                    "id":1,
+                    "id":3,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -176,7 +185,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -184,9 +196,12 @@
                         
                 },
                 {
-                    "id":1,
+                    "id":2,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -194,9 +209,12 @@
                 },
                 {
                     
-                    "id":1,
+                    "id":3,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -234,7 +252,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -242,9 +263,12 @@
                         
                 },
                 {
-                    "id":1,
+                    "id":2,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -252,9 +276,12 @@
                 },
                 {
                     
-                    "id":1,
+                    "id":3,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -292,7 +319,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -300,9 +330,12 @@
                         
                 },
                 {
-                    "id":1,
+                    "id":2,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -310,9 +343,12 @@
                 },
                 {
                     
-                    "id":1,
+                    "id":3,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -349,7 +385,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -357,9 +396,12 @@
                         
                 },
                 {
-                    "id":1,
+                    "id":2,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -367,9 +409,12 @@
                 },
                 {
                     
-                    "id":1,
+                    "id":3,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -407,7 +452,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -415,9 +463,12 @@
                         
                 },
                 {
-                    "id":1,
+                    "id":2,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":1,
+                        "description": "Inicial"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -425,9 +476,12 @@
                 },
                 {
                     
-                    "id":1,
+                    "id":3,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -464,7 +518,10 @@
                 {
                     "id":1,
                     "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 1,
                         "description": "Panel de control"
@@ -474,7 +531,10 @@
                 {
                     "id":1,
                     "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"
@@ -484,7 +544,10 @@
                     
                     "id":1,
                     "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-                    "status": 1,
+                    "status":  [{
+                        "id":2,
+                        "description": "Desarrollo"
+                    }],
                     "module": [{
                         "id": 2,
                         "description": "Informes"

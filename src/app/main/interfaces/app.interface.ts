@@ -13,9 +13,9 @@ export interface App {
 }
 
 export interface Customer {
-    id:    number;
+    id?:    string;
     name:  string;
-    email: string;
+    email?: string;
     phone: number;
 }
 
@@ -25,7 +25,7 @@ export interface Module {
 }
 
 export interface Hu {
-    id:          number;
+    id:          string;
     description: string;
     status:      Stage[];
     module: Module[];
@@ -44,5 +44,9 @@ export interface Stage {
 export interface Tecnology {
     id:          number;
     description: string;
+}
+
+export enum StageData{
+    
 }
 

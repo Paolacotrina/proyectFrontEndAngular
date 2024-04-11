@@ -15,6 +15,7 @@ import { NewAppComponent } from './pages/new-app/new-app.component';
 import { EditAppComponent } from './pages/edit-app/edit-app.component';
 import { HuAppComponent } from './pages/hu-app/hu-app.component';
 import { StatusComponent } from './components/status/status.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { StatusComponent } from './components/status/status.component';
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }

@@ -4,8 +4,8 @@
     </ng-template>
     <div  *ngIf="app; else divLoading"> 
         <div class="row">
-            <h4 class="border-bottom border-info col-md-6 p-2">Aplicaciones / {{app.name}}</h4>
-            <div class="d-flex flex-row-reverse col-md-6">
+            <h4 class="border-bottom border-info col-md-5 p-2">Aplicaciones / {{app.name}}</h4>
+            <div class=" col-md-7">
                <app-status [stage]="app.stage"></app-status>
             </div>
         </div>
@@ -35,7 +35,7 @@
                 </div>
 
                 
-            <form action="#!">
+            <form [formGroup]="huForm" (ngSubmit)="onSubmit()">
                 <div class="row gy-4 gy-xl-5  p-xl-5 ">
                     <div class="col-md-2">
                         <label class="h6">Historia de usuario:</label>
@@ -43,11 +43,9 @@
                     <div class="col-md-10">
                         <textarea 
                         type="text" 
-                        class="form-control" 
-                        id="fullname" 
-                        name="fullname" 
-                        value="" 
+                        class="form-control"  
                         required 
+                        formControlName="hu"
                         >
                         </textarea>
                     </div>
@@ -57,11 +55,9 @@
                     <div class="col-md-4">
                         <select 
                         type="date" 
-                        class="form-control" 
-                        id="fullname" 
-                        name="fullname" 
-                        value="" 
+                        class="form-control"  
                         required 
+                        formControlName="modulo"
                         >
                         <option *ngFor="let module of modules" [value]="module.id">
                             {{module.description}}
