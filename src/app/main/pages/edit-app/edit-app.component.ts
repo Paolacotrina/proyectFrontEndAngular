@@ -14,6 +14,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class EditAppComponent implements OnInit{
   public modules: Module[]=[];
   public app?: App;
+  public message: boolean = false;
 
   public huForm = new FormGroup({
     hu: new FormControl(''),
@@ -67,7 +68,12 @@ export class EditAppComponent implements OnInit{
     if (this.app) {
       this.app.hu.push(this.currentHu);
       this.appsService.updateApp(this.app).subscribe(updatedApp => {
-        console.log('Aplicación actualizada con la nueva HU:', updatedApp);
+        this.message = true;
+        this.huForm.reset();
+        setTimeout(() => {
+          this.message = false;
+        }, 3000);
+        
       });
      }
   

@@ -4,19 +4,29 @@
         <h6>Formulario de solicitud de desarrollo a la medida</h6>
         <p>Ingrese los datos básicos del proyecto y uno de nuestros expertos se contactará con usted.</p>
         <div class="bg-accent shadow rounded overflow-hidden">
-          <form action="#!">
+          <form [formGroup]="requestform" (ngSubmit)="onSubmit()">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                 <div class="col-md-3 text-right">
                     <strong>Nombre completo o razon social</strong>
                 </div>
                 <div class="col-md-9">
-                    <p>John Doe</p>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    required 
+                    formControlName="nameCustomer"
+                    >
                 </div>
                 <div class="col-md-3 text-left">
                     <strong>Correo electrónico</strong>
                 </div>
                 <div class="col-md-9">
-                    <p>johngerente&#64;miempresa.com</p>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    required 
+                    formControlName="emailCustomer"
+                    >
                 </div>
                 <div class="col-3">
                     <label class="h6">Nombre del proyecto *:</label>
@@ -24,24 +34,20 @@
                 <div class="col-9">
                     <input 
                     type="text" 
-                    class="form-control col-md-6" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    class="form-control" 
                     required 
+                    formControlName="nameProyect"
                     >
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <label class="h6">Telefono de contacto*:</label>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <input 
                     type="text" 
-                    class="form-control col-md-6" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    class="form-control" 
                     required 
+                    formControlName="phone"
                     >
                 </div>
                 
@@ -52,7 +58,9 @@
                 </div>
             </div>
           </form>
-
+          <div *ngIf="message" class="alert alert-success" role="alert">
+            Solicitud enviada 
+          </div>
         </div>
       </div>
     </div>

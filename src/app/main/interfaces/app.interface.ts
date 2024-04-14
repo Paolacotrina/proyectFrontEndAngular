@@ -46,7 +46,13 @@ export interface Tecnology {
     description: string;
 }
 
-export enum StageData{
-    
+export interface Requests{
+    id?: number;
+    nameCustomer:  string,
+    emialCustomer: string,
+    proyectName: string,
+    phone: number,
+    date?: Date,
+    state: StageRequest[]
 }
 

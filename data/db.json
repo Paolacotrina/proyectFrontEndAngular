@@ -1,4 +1,48 @@
 {
+  "requests": [
+    {
+      "id": "274e",
+      "nameCustomer": "Anibal Herrera",
+      "emialCustomer": "anibal@com.cm",
+      "proyectName": "Cojinería Las Delicias",
+      "phone": 3204517842,
+      "date": "2024-04-12T16:28:14.071Z",
+      "state": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ]
+    },
+    {
+      "id": "539f",
+      "nameCustomer": "Anibal Herrera",
+      "emialCustomer": "anibal@com.cm",
+      "proyectName": "Cojinería Las Delicias",
+      "phone": 3204517842,
+      "date": "2024-04-12T16:28:17.214Z",
+      "state": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ]
+    },
+    {
+      "id": "5697",
+      "nameCustomer": "Ricardo Fula Borias",
+      "emialCustomer": "anibal@com.cm",
+      "proyectName": "Chaily Helados",
+      "phone": 3204517842,
+      "date": "2024-04-12T16:31:13.903Z",
+      "state": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ]
+    }
+  ],
   "users": [
     {
       "role": "1",
@@ -167,6 +211,54 @@
             {
               "id": 2,
               "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "98",
+          "description": "Acceder al panel de control y ver los ultimos registros de suministros",
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "75",
+          "description": "Validación de HU",
+          "module": [
+            {
+              "id": 5,
+              "description": "Registro de datos"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "43",
+          "description": "uhu",
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
             }
           ]
         }
@@ -741,6 +833,38 @@
           "description": "Inicial"
         }
       ]
+    },
+    {
+      "id": "97",
+      "name": "Cojinería Las Delicias",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "startDate": "2024-04-12",
+      "end": "2024-08-21",
+      "tecnology": [
+        {
+          "id": 4,
+          "description": "Appian"
+        }
+      ],
+      "customer": [
+        {
+          "name": "Anibal Herrera",
+          "phone": 3204517842,
+          "email": "anibal@com.cm"
+        }
+      ],
+      "hu": []
     }
   ]
 }

@@ -4,8 +4,8 @@
     </ng-template>
     <div  *ngIf="app; else divLoading"> 
         <div class="row">
-            <h4 class="border-bottom border-info col-md-5 p-2">Aplicaciones / {{app.name}}</h4>
-            <div class=" col-md-7">
+            <h4 class="border-bottom border-info col-md-7 p-2">Aplicaciones / {{app.name}}</h4>
+            <div class="col-md-5">
                <app-status [stage]="app.stage"></app-status>
             </div>
         </div>
@@ -70,9 +70,12 @@
                     </div>
                 </div>
             </form>
-
-            
             </div>
+            <div *ngIf="message" class="alert alert-success" role="alert">
+                Historia de usuario agregada 
+            </div>
+
+
             <app-hu-module [hus]="app.hu"></app-hu-module>
         
         </div>

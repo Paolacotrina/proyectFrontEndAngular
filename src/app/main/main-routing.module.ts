@@ -8,6 +8,7 @@ import { SupportComponent } from './pages/support/support.component';
 import { NewAppComponent } from './pages/new-app/new-app.component';
 import { EditAppComponent } from './pages/edit-app/edit-app.component';
 import { HuAppComponent } from './pages/hu-app/hu-app.component';
+import { ListRequestComponent } from './pages/list-request/list-request.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
       { path: 'solicitudes', component: RequestsComponent},
       { path: 'soporte', component: SupportComponent},
       { path: 'listApp', component: ListAppComponent },
-      { path: 'aplicacion', component: NewAppComponent },
+      { path: 'listRequest', component: ListRequestComponent },
+      { path: 'aplicacion/:id', component: NewAppComponent },
       { path: 'editar/:id', component: EditAppComponent },
       { path: 'hu/:id', component: HuAppComponent },
       { path: '**', redirectTo: 'tecnologia' }

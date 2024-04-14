@@ -16,6 +16,7 @@ import { EditAppComponent } from './pages/edit-app/edit-app.component';
 import { HuAppComponent } from './pages/hu-app/hu-app.component';
 import { StatusComponent } from './components/status/status.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListRequestComponent } from './pages/list-request/list-request.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewAppComponent,
     EditAppComponent,
     HuAppComponent,
-    StatusComponent
+    StatusComponent,
+    ListRequestComponent
   ],
   imports: [
     CommonModule,
