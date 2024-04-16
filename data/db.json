@@ -47,13 +47,13 @@
     {
       "role": "1",
       "email": "admin@pc.com",
-      "name": "Paola Cotrina C",
+      "user": "Paola Cotrina C",
       "id": "8fd5"
     },
     {
       "role": "2",
       "name": "Jhon Doe",
-      "email": "johndoe@miempresa.com",
+      "user": "johndoe@miempresa.com",
       "id": "a09e"
     }
   ],
@@ -851,6 +851,38 @@
       ],
       "startDate": "2024-04-12",
       "end": "2024-08-21",
+      "tecnology": [
+        {
+          "id": 4,
+          "description": "Appian"
+        }
+      ],
+      "customer": [
+        {
+          "name": "Anibal Herrera",
+          "phone": 3204517842,
+          "email": "anibal@com.cm"
+        }
+      ],
+      "hu": []
+    },
+    {
+      "id": "10",
+      "name": "Cojinería Las Delicias",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 1,
+          "description": "Inicial"
+        }
+      ],
+      "startDate": "2024-04-16",
+      "end": "2024-05-11",
       "tecnology": [
         {
           "id": 4,
