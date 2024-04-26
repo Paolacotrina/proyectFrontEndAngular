@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row gy-4 gy-md-5 gy-lg-0">
+                <h4 class="border-bottom border-info col-md-6 p-2">Mis aplicaciones</h4>
+                  <div class="col-12 col-lg-12 mt-5">
+                    <table class="table table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Proyecto</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Etapa</th>
+                          </tr>
+                        </thead>
+                        <tbody >
+                          <tr *ngFor="let app of apps">
+                            <th scope="row">
+                              <app-image-technology [idTecnology]="app.tecnology[0].id"></app-image-technology>
+                            </th>
+                            <td>{{ app.name }}</td>
+                            <td>{{ app.customer[0].name }}</td>
+                            <td><app-status [stage]="app.stage"></app-status></td>
+                            
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                      <div *ngIf="message" class="alert alert-success" role="alert" >
+                       El estado de la aplicación se ha actualizado correctamente 
+                    </div>
+                  </div>
+                </div>
+        </div>
+        
+        <div class="col-md-4 justify-content-center align-items-center" style="height: 100vh;">
+            <div class="outer-div mt-2">
+                <div class="inner-div text-center">
+                <div class="chart-container">
+                    <canvas  id="chartDonut" >{{ chartDonut }}</canvas>
+                </div> 
+                <div class="chart-container">
+                    <canvas  id="chartDonutTechnology" >{{ chartDonut }}</canvas>
+                </div>
+                </div>
+            </div>
+            </div>
+             
+            
+        
+        <div class="col-md-12">
+            <div class="chart-container">
+                <canvas  id="MyChart" >{{ chart }}</canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    
+
+
+

@@ -2,6 +2,32 @@
 <div class="row gy-4 gy-md-5 gy-lg-0">
     <h4 class="border-bottom border-info col-md-6 p-2">Mis aplicaciones</h4>
       <div class="col-12 col-lg-12 mt-5">
+        <div class="row p-2 mb-2">
+          <div class="col-md-1">
+              <svg fill="#000000" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                  <path d="M21.07,16.83,19,14.71a3.08,3.08,0,0,0-3.4-.57l-.9-.9a7,7,0,1,0-1.41,1.41l.89.89A3,3,0,0,0,14.71,19l2.12,2.12a3,3,0,0,0,4.24,0A3,3,0,0,0,21.07,16.83Zm-8.48-4.24a5,5,0,1,1,0-7.08A5,5,0,0,1,12.59,12.59Zm7.07,7.07a1,1,0,0,1-1.42,0l-2.12-2.12a1,1,0,0,1,0-1.42,1,1,0,0,1,1.42,0l2.12,2.12A1,1,0,0,1,19.66,19.66Z"/>
+              </svg>
+          </div>
+          <div class="col-md-3">
+              <input type="text" 
+              class="form-control" 
+              [(ngModel)]="proyect"
+              placeholder="Buscar proyecto"
+              >
+          </div>
+          <div class="col-md-3">
+              <select  
+              class="form-select"
+              [(ngModel)]="status" 
+              >
+              <option disabled selected>Estado</option>
+              <option *ngFor="let st of stage" [value]="st.id">
+                  {{st.description}}
+              </option>
+              </select>
+          </div>
+     
+      </div>
         <table class="table table-sm">
             <thead>
               <tr>
@@ -13,11 +39,11 @@
               </tr>
             </thead>
             <tbody >
-              <tr *ngFor="let request of requests">
+              <tr *ngFor="let request of requests | tableFilterKeyword: proyect | tableFilterStatus: status">
                 <td>{{ request.proyectName }}</td>
                 <td>{{ request.nameCustomer }}</td>
                 <td>{{ request.emialCustomer}} <br> {{ request.phone }}</td>
-                <td>{{ request.state[0].description }}</td>
+                <td><app-status [stage]="request.state"></app-status></td>
                 <td> 
                   <button class="btn btn-light btn-sm" [routerLink]="['/main/aplicacion', request.id]"> 
                   <svg fill="#000000" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z"/></svg>

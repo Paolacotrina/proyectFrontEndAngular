@@ -57,7 +57,7 @@
                     <div class="col-md-4">
                         <select 
                         type="date" 
-                        class="form-control" 
+                        class="form-select" 
                         required 
                         formControlName="stage"
                         [(ngModel)]="opcionSeleccionada"
@@ -68,14 +68,14 @@
                         </select>
                     </div>
                    
-                    <div class="row p-xl-2" *ngIf="opcionSeleccionada == '3'">
+                    <div class="row ml-2 p-2" *ngIf="opcionSeleccionada == '3'">
                     <div class="col-md-2 p-2">
                         <label class="h6">Tecnologia*:</label>
                     </div>
                     <div class="col-md-4 p-2">
                         <select 
                         type="date" 
-                        class="form-control" 
+                        class="form-select" 
                         required 
                         formControlName="tecnology"
                         >
@@ -119,21 +119,21 @@
           </div>
           <div class="bg-accent shadow rounded overflow-hidden mt-2 row ">
             <div class="col-md-6 p-5">
+                <div *ngIf="messageModule" class="alert alert-success" role="alert">
+                    Modulo eliminado
+                  </div>
                 <table class="table table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Nombre del modulo</th>
-                            <th scope="col">Asociar al proyecto</th>
+                            <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let module of modules">
                             <td>{{ module.description }}</td>
                             <td class="text-center">
-                                <button class="btn btn-light btn-sm">
-                                    <svg fill="#000000" width="20" height="20" viewBox="0 0 24 24" id="check" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color"><polyline id="primary" points="5 12 10 17 19 8" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline></svg>
-                                </button>
-                                <button class="btn btn-light btn-sm">
+                                <button class="btn btn-light btn-sm" (click)="deleteModule(module.id)">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h4a1 1 0 1 1 0 2h-1.069l-.867 12.142A2 2 0 0 1 17.069 22H6.93a2 2 0 0 1-1.995-1.858L4.07 8H3a1 1 0 0 1 0-2h4V4zm2 2h6V4H9v2zM6.074 8l.857 12H17.07l.857-12H6.074zM10 10a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1zm4 0a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1z" fill="#0D0D0D"/></svg>
                                 </button>
                             </td>
@@ -142,23 +142,24 @@
                 </table>
             </div>
             <div class="card col-md-5 p-5 mt-2 rounded border border-info">
-                <h6>Crear módulo</h6>
-                <div class="col-md-12">
-                    <label class="h6">Nombre del módulo*:</label>
-                </div>
-                <div class="col-md-12">
-                    <input 
-                    type="text" 
-                    class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
-                    required
-                    >
-                </div>
-                <div class="col-md-12 d-flex justify-content-center align-items-center m-2">
-                    <button class="btn btn-info text-light w-100" type="submit">Crear</button>
-                </div>
+                <form [formGroup]="appModule" (ngSubmit)="onSubmitModule()">
+                    <h6>Crear módulo</h6>
+                    <div class="col-md-12">
+                        <label class="h6">Nombre del módulo*:</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        required 
+                        formControlName="nameModule"
+                        >
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-center align-items-center m-2">
+                        <button class="btn btn-info text-light w-100" type="submit">Crear</button>
+                    </div>
+                </form>
+
             </div>
 
         </div>  

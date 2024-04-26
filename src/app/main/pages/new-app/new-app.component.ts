@@ -21,6 +21,7 @@ export class NewAppComponent implements OnInit{
   public requests?: Requests;
   public message: boolean = false;
   public messageRequest: boolean =false;
+  public messageModule: boolean = false;
   public stagesSelected: StageRequest[] =[];
   public opcionSeleccionada: string = ''
 
@@ -45,7 +46,10 @@ export class NewAppComponent implements OnInit{
     emailCustomer: new FormControl(''),
     hu:new FormControl(''),
   });
-
+  
+  public appModule = new FormGroup({
+    nameModule: new FormControl('',{ nonNullable: true}),
+  });
 
   ngOnInit(): void {
     this.activatedRoute.params
@@ -124,6 +128,31 @@ export class NewAppComponent implements OnInit{
     
   }
 
+  deleteModule(id: number): void {
+     this.moduleService.deleteModule(id).subscribe(res=>{
+      this.messageModule = true;
+      setTimeout(() => {
+        this.messageModule = false;
+      }, 3000);
+     })
+  }
+
+  onSubmitModule():void{
+    if( this.appModule.invalid) return;
+
+    const miModule: Module ={
+      id: Math.floor(Math.random()*(100-1)+1)+1,
+      description:  this.appModule.value.nameModule ?? ''
+    }
+
+    this.moduleService.addModule(miModule).subscribe(
+      res => {
+        this.appForm.reset();
+      }
+
+        
+    )
+  }
   onSubmit():void{
 
     if( this.appForm.invalid) return;
@@ -132,7 +161,6 @@ export class NewAppComponent implements OnInit{
       //La solicitud ha sido aprobada se crea un nuevo proyecto en el sistema
       this.appService.addApp( this.currentApp)
       .subscribe( app => {
-        console.log("Cree !!")
         this.message = true;
         this.appForm.reset();
         setTimeout(() => {

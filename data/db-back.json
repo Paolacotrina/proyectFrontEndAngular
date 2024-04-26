@@ -1,870 +1,992 @@
 {
-    "requests": [
-      {
-        "id": "274e",
-        "nameCustomer": "Anibal Herrera",
-        "emialCustomer": "anibal@com.cm",
-        "proyectName": "Cojinería Las Delicias",
-        "phone": 3204517842,
-        "date": "2024-04-12T16:28:14.071Z",
-        "state": [
-          {
-            "id": 1,
-            "description": "Abierta"
-          }
-        ]
-      },
-      {
-        "id": "539f",
-        "nameCustomer": "Anibal Herrera",
-        "emialCustomer": "anibal@com.cm",
-        "proyectName": "Cojinería Las Delicias",
-        "phone": 3204517842,
-        "date": "2024-04-12T16:28:17.214Z",
-        "state": [
-          {
-            "id": 1,
-            "description": "Abierta"
-          }
-        ]
-      },
-      {
-        "id": "5697",
-        "nameCustomer": "Ricardo Fula Borias",
-        "emialCustomer": "anibal@com.cm",
-        "proyectName": "Chaily Helados",
-        "phone": 3204517842,
-        "date": "2024-04-12T16:31:13.903Z",
-        "state": [
-          {
-            "id": 1,
-            "description": "Abierta"
-          }
-        ]
-      }
-    ],
-    "users": [
-      {
-        "role": "1",
-        "email": "admin@pc.com",
-        "user": "Paola Cotrina C",
-        "id": "8fd5"
-      },
-      {
-        "role": "2",
-        "name": "Jhon Doe",
-        "user": "johndoe@miempresa.com",
-        "id": "a09e"
-      }
-    ],
-    "stageRequest": [
-      {
-        "id": "1",
-        "description": "Abierta"
-      },
-      {
-        "id": "2",
-        "description": "En contacto"
-      },
-      {
-        "id": "3",
-        "description": "Aprobada"
-      },
-      {
-        "id": "4",
-        "description": "Finalizada"
-      }
-    ],
-    "stage": [
-      {
-        "id": "1",
-        "description": "Inicial"
-      },
-      {
-        "id": "2",
-        "description": "Desarrollo"
-      },
-      {
-        "id": "3",
-        "description": "Pruebas"
-      },
-      {
-        "id": "4",
-        "description": "Producción"
-      }
-    ],
-    "tecnology": [
-      {
-        "id": "1",
-        "description": "Angular"
-      },
-      {
-        "id": "2",
-        "description": "React"
-      },
-      {
-        "id": "3",
-        "description": "Power Apps"
-      },
-      {
-        "id": "4",
-        "description": "Appian"
-      }
-    ],
-    "module": [
-      {
-        "id": "1",
+  "supports": [
+    {
+      "id": "784",
+      "proyect": "1",
+      "hu": [{
+        "id": 1,
+        "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros"
+      }],
+      "module": [{
+        "id": 1,
         "description": "Panel de control"
-      },
-      {
-        "id": "2",
-        "description": "Informes"
-      },
-      {
-        "id": "3",
-        "description": "Registro de usuarios"
-      },
-      {
-        "id": "4",
-        "description": "Gestión de inventario"
-      },
-      {
-        "id": "5",
-        "description": "Registro de datos"
-      }
-    ],
-    "apps": [
-      {
-        "id": "1",
-        "name": "Portal de suministros",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2024-01-12",
-        "end": "2025-06-21",
-        "tecnology": [
-          {
-            "id": 1,
-            "description": "Angular"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "98",
-            "description": "Acceder al panel de control y ver los ultimos registros de suministros",
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ],
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ]
-          },
-          {
-            "id": "75",
-            "description": "Validación de HU",
-            "module": [
-              {
-                "id": 5,
-                "description": "Registro de datos"
-              }
-            ],
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ]
-          },
-          {
-            "id": "43",
-            "description": "uhu",
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ],
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "name": "Portal de ventas",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2023-06-19",
-        "end": "2024-06-19",
-        "tecnology": [
-          {
-            "id": 1,
-            "description": "Angular"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3",
-        "name": "Portal de ventas en punto",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2023-06-19",
-        "end": "2024-06-19",
-        "tecnology": [
-          {
-            "id": 3,
-            "description": "Power Apps"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "4",
-        "name": "Portal de admisiones",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2023-06-19",
-        "end": "2024-06-19",
-        "tecnology": [
-          {
-            "id": 4,
-            "description": "Appian"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "5",
-        "name": "Portal de créditos educativos",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2023-06-19",
-        "end": "2024-06-19",
-        "tecnology": [
-          {
-            "id": 4,
-            "description": "Appian"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "6",
-        "name": "Portal de inventarios",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2023-06-19",
-        "end": "2024-06-19",
-        "tecnology": [
-          {
-            "id": 1,
-            "description": "Angular"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "7",
-        "name": "Portal de e-commerce",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ],
-        "startDate": "2023-06-19",
-        "end": "2024-06-19",
-        "tecnology": [
-          {
-            "id": 2,
-            "description": "React"
-          }
-        ],
-        "customer": [
-          {
-            "id": 1,
-            "name": "Jhon Doe",
-            "email": "johndoe@miempresa.com",
-            "phone": 3210236441
-          }
-        ],
-        "hu": [
-          {
-            "id": "1",
-            "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ]
-          },
-          {
-            "id": "45",
-            "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          },
-          {
-            "id": "23",
-            "description": "Recibir una confirmación por correo electrónico después de completar el registro",
-            "status": [
-              {
-                "id": 2,
-                "description": "Desarrollo"
-              }
-            ],
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "40",
-        "name": "Postres Chaily",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 2,
-            "description": "En contacto"
-          }
-        ],
-        "startDate": "2024-04-12",
-        "end": "2024-04-19",
-        "tecnology": [
-          {
-            "id": 1,
-            "description": "Angular"
-          }
-        ],
-        "customer": [
-          {
-            "name": "Camilo Herrere",
-            "phone": 3204517842,
-            "email": "misdeliciosospostres@chaily.com"
-          }
-        ],
-        "hu": [
-          {
-            "id": "24",
-            "description": "Pruebas de HU",
-            "module": [
-              {
-                "id": 2,
-                "description": "Informes"
-              }
-            ],
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ]
-          },
-          {
-            "id": "29",
-            "description": "Pruebas de HU #2",
-            "module": [
-              {
-                "id": 1,
-                "description": "Panel de control"
-              }
-            ],
-            "status": [
-              {
-                "id": 1,
-                "description": "Inicial"
-              }
-            ]
-          }
-        ],
-        "description": "Registras insumos con opciones de medida",
-        "module": [
-          {
-            "id": 4,
-            "description": "Gestión de inventario"
-          }
-        ],
-        "status": [
-          {
-            "id": 1,
-            "description": "Inicial"
-          }
-        ]
-      },
-      {
-        "id": "97",
-        "name": "Cojinería Las Delicias",
-        "stageRequest": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "stage": [
-          {
-            "id": 3,
-            "description": "Aprobada"
-          }
-        ],
-        "startDate": "2024-04-12",
-        "end": "2024-08-21",
-        "tecnology": [
-          {
-            "id": 4,
-            "description": "Appian"
-          }
-        ],
-        "customer": [
-          {
-            "name": "Anibal Herrera",
-            "phone": 3204517842,
-            "email": "anibal@com.cm"
-          }
-        ],
-        "hu": []
-      }
-    ]
-  }
+      }],
+      "date": "2024-04-12T16:28:14.071Z",
+      "stageRequest": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ],
+      "detail": "generar error al ingresar al panel de control"
+    }
+  ],
+  "requests": [
+    {
+      "id": "274e",
+      "nameCustomer": "Anibal Herrera",
+      "emialCustomer": "anibal@com.cm",
+      "proyectName": "Cojinería Las Delicias",
+      "phone": 3204517842,
+      "date": "2024-04-12T16:28:14.071Z",
+      "state": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ]
+    },
+    {
+      "id": "539f",
+      "nameCustomer": "Anibal Herrera",
+      "emialCustomer": "anibal@com.cm",
+      "proyectName": "Cojinería Las Delicias",
+      "phone": 3204517842,
+      "date": "2024-04-12T16:28:17.214Z",
+      "state": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ]
+    },
+    {
+      "id": "5697",
+      "nameCustomer": "Ricardo Fula Borias",
+      "emialCustomer": "anibal@com.cm",
+      "proyectName": "Chaily Helados",
+      "phone": 3204517842,
+      "date": "2024-04-12T16:31:13.903Z",
+      "state": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "role": "1",
+      "email": "admin@pc.com",
+      "user": "Paola Cotrina C",
+      "id": "8fd5"
+    },
+    {
+      "role": "2",
+      "name": "Jhon Doe",
+      "user": "johndoe@miempresa.com",
+      "id": "a09e"
+    }
+  ],
+  "stageRequest": [
+    {
+      "id": "1",
+      "description": "Abierta"
+    },
+    {
+      "id": "2",
+      "description": "En contacto"
+    },
+    {
+      "id": "3",
+      "description": "Aprobada"
+    },
+    {
+      "id": "4",
+      "description": "Finalizada"
+    }
+  ],
+  "stage": [
+    {
+      "id": "1",
+      "description": "Inicial"
+    },
+    {
+      "id": "2",
+      "description": "Desarrollo"
+    },
+    {
+      "id": "3",
+      "description": "Pruebas"
+    },
+    {
+      "id": "4",
+      "description": "Producción"
+    }
+  ],
+  "tecnology": [
+    {
+      "id": "1",
+      "description": "Angular"
+    },
+    {
+      "id": "2",
+      "description": "React"
+    },
+    {
+      "id": "3",
+      "description": "Power Apps"
+    },
+    {
+      "id": "4",
+      "description": "Appian"
+    }
+  ],
+  "module": [
+    {
+      "id": "1",
+      "description": "Panel de control"
+    },
+    {
+      "id": "2",
+      "description": "Informes"
+    },
+    {
+      "id": "3",
+      "description": "Registro de usuarios"
+    },
+    {
+      "id": "4",
+      "description": "Gestión de inventario"
+    },
+    {
+      "id": "5",
+      "description": "Registro de datos"
+    },
+    {
+      "id": "98",
+      "description": "Perfil"
+    }
+  ],
+  "apps": [
+    {
+      "id": "1",
+      "name": "Portal de suministros",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 3,
+          "description": "Pruebas"
+        }
+      ],
+      "startDate": "2024-01-12",
+      "end": "2025-06-21",
+      "tecnology": [
+        {
+          "id": 1,
+          "description": "Angular"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "98",
+          "description": "Acceder al panel de control y ver los ultimos registros de suministros",
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "75",
+          "description": "Validación de HU",
+          "module": [
+            {
+              "id": 5,
+              "description": "Registro de datos"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "43",
+          "description": "uhu cocoa",
+          "module": [
+            {
+              "id": 3,
+              "description": "Registro de usuarios"
+            }
+          ],
+          "status": [
+            {
+              "id": 3,
+              "description": "Pruebas"
+            }
+          ]
+        },
+        {
+          "id": "1",
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros",
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ],
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ]
+        },
+        {
+          "id": "1",
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros",
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ],
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "description": "Development",
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Portal de ventas",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 2,
+          "description": "Desarrollo"
+        }
+      ],
+      "startDate": "2023-06-19",
+      "end": "2024-06-19",
+      "tecnology": [
+        {
+          "id": 1,
+          "description": "Angular"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Portal de ventas en punto",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 2,
+          "description": "Desarrollo"
+        }
+      ],
+      "startDate": "2023-06-19",
+      "end": "2024-06-19",
+      "tecnology": [
+        {
+          "id": 3,
+          "description": "Power Apps"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Portal de admisiones",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 2,
+          "description": "Desarrollo"
+        }
+      ],
+      "startDate": "2023-06-19",
+      "end": "2024-06-19",
+      "tecnology": [
+        {
+          "id": 4,
+          "description": "Appian"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Portal de créditos educativos",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 2,
+          "description": "Desarrollo"
+        }
+      ],
+      "startDate": "2023-06-19",
+      "end": "2024-06-19",
+      "tecnology": [
+        {
+          "id": 4,
+          "description": "Appian"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Portal de inventarios",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 1,
+          "description": "Inicial"
+        }
+      ],
+      "startDate": "2023-06-19",
+      "end": "2024-06-19",
+      "tecnology": [
+        {
+          "id": 1,
+          "description": "Angular"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Portal de e-commerce",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 1,
+          "description": "Inicial"
+        }
+      ],
+      "startDate": "2023-06-19",
+      "end": "2024-06-19",
+      "tecnology": [
+        {
+          "id": 2,
+          "description": "React"
+        }
+      ],
+      "customer": [
+        {
+          "id": 1,
+          "name": "Jhon Doe",
+          "email": "johndoe@miempresa.com",
+          "phone": 3210236441
+        }
+      ],
+      "hu": [
+        {
+          "id": "1",
+          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ]
+        },
+        {
+          "id": "45",
+          "description": "Generar informes de suministros que ayuden a tomar decisiones de suministros más informadas",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        },
+        {
+          "id": "23",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro",
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ],
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Postres Chaily",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 2,
+          "description": "En contacto"
+        }
+      ],
+      "startDate": "2024-04-12",
+      "end": "2024-04-19",
+      "tecnology": [
+        {
+          "id": 1,
+          "description": "Angular"
+        }
+      ],
+      "customer": [
+        {
+          "name": "Camilo Herrere",
+          "phone": 3204517842,
+          "email": "misdeliciosospostres@chaily.com"
+        }
+      ],
+      "hu": [
+        {
+          "id": "24",
+          "description": "Pruebas de HU",
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "29",
+          "description": "Pruebas de HU #2",
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "69",
+          "description": "Adiciona Hu -- actualizada",
+          "module": [
+            {
+              "id": 3,
+              "description": "Registro de usuarios"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        }
+      ],
+      "description": "Registras insumos con opciones de medida",
+      "module": [
+        {
+          "id": 4,
+          "description": "Gestión de inventario"
+        }
+      ],
+      "status": [
+        {
+          "id": 1,
+          "description": "Inicial"
+        }
+      ]
+    },
+    {
+      "id": "97",
+      "name": "Cojinería Las Delicias",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "startDate": "2024-04-12",
+      "end": "2024-08-21",
+      "tecnology": [
+        {
+          "id": 4,
+          "description": "Appian"
+        }
+      ],
+      "customer": [
+        {
+          "name": "Anibal Herrera",
+          "phone": 3204517842,
+          "email": "anibal@com.cm"
+        }
+      ],
+      "hu": []
+    },
+    {
+      "id": "10",
+      "name": "Cojinería Las Delicias",
+      "stageRequest": [
+        {
+          "id": 3,
+          "description": "Aprobada"
+        }
+      ],
+      "stage": [
+        {
+          "id": 1,
+          "description": "Inicial"
+        }
+      ],
+      "startDate": "2024-04-16",
+      "end": "2024-05-11",
+      "tecnology": [
+        {
+          "id": 4,
+          "description": "Appian"
+        }
+      ],
+      "customer": [
+        {
+          "name": "Anibal Herrera",
+          "phone": 3204517842,
+          "email": "anibal@com.cm"
+        }
+      ],
+      "hu": []
+    }
+  ]
+}

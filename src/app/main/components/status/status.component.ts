@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Stage } from '../../interfaces/app.interface';
 
 @Component({
@@ -6,14 +6,16 @@ import { Stage } from '../../interfaces/app.interface';
   templateUrl: './status.component.html',
   styleUrl: './status.component.css'
 })
-export class StatusComponent implements OnInit {
+export class StatusComponent implements OnChanges  {
   
   @Input() stage!: Stage[];
   public color: string = '';
   public descripcion: string = ''; 
 
-  ngOnInit(): void {
+  ngOnChanges(): void  {
     this.descripcion = this.stage[0].description;
+
+    console.log("s")
     
     switch(this.stage[0].id){
       case 1:

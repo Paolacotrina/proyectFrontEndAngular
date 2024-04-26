@@ -35,8 +35,9 @@ export class EditAppComponent implements OnInit{
       switchMap( ({id})=> this.appsService.getAppsById( id) )
     )
     .subscribe( app => {
-       if(!app) return this.router.navigate(['/main/listApp']);
+      // if(!app) return this.router.navigate(['/main/listApp']);
        this.app = app;
+       
        return;
     });
 

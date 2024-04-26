@@ -4,7 +4,7 @@
         <h6>Formulario de solicitud de soporte</h6>
         <p>Ingrese los datos relacionaos a la aplicacion la cual necesita soporte.</p>
         <div class="bg-accent shadow rounded overflow-hidden">
-          <form action="#!">
+            <form [formGroup]="supportForm" (ngSubmit)="onSubmit()">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                 <div class="col-md-3">
                     <label class="h6">Seleccione el proyecto*:</label>
@@ -12,20 +12,20 @@
                 <div class="col-md-5">
                     <select 
                     type="text" 
-                    class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    class="form-select" 
                     required 
+                    formControlName="proyect"
                     >
-                    <option>Hpla</option>
+                    <option *ngFor="let ap of app" [value]="ap.id">
+                        {{ap.name}}
+                      </option>
                     </select>
                 </div>
                 <div class="col-md-2">
                     <label class="h6">Tecnologia:</label>
                 </div>
                 <div class="col-md-2">
-                    <img src="../../../../assets/images/logoAngular.png" width="30" height="30">
+                    <app-image-technology [idTecnology]="idTecno"></app-image-technology>
                 </div>
 
                 <div class="col-md-3">
@@ -34,13 +34,13 @@
                 <div class="col-md-9">
                     <select 
                     type="text" 
-                    class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    class="form-select" 
                     required 
+                    formControlName="module"
                     >
-                    <option>Registro usuario</option>
+                    <option *ngFor="let module of modules" [value]="module.id">
+                        {{module.description}}
+                    </option>
                     </select>
                 </div>
 
@@ -50,13 +50,13 @@
                 <div class="col-md-9">
                     <select 
                     type="text" 
-                    class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    class="form-select" 
                     required 
+                    formControlName="hu"
                     >
-                    <option>Registro usuario</option>
+                    <option *ngFor="let hu of hus" [value]="hu.id">
+                        {{hu.description}}
+                    </option>
                     </select>
                 </div>
 
@@ -65,12 +65,10 @@
                 </div>
                 <div class="col-md-9">
                     <textarea 
-                    type="text" 
                     class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    type="text" 
                     required 
+                    formControlName="detail"
                     ></textarea>
                     
                 </div>
@@ -82,6 +80,9 @@
                 </div>
             </div>
           </form>
+          <div *ngIf="message" class="alert alert-success" role="alert">
+            Solicitud de soporte enviada correctamente
+          </div>
 
         </div>
       </div>

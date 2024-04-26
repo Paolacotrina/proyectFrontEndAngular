@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Hu } from '../../interfaces/app.interface';
+import { App, Hu, Module } from '../../interfaces/app.interface';
+import { ModuleService } from '../../services/module.service';
 
 @Component({
   selector: 'app-hu-module',
@@ -8,9 +9,15 @@ import { Hu } from '../../interfaces/app.interface';
 })
 export class HuAppComponent implements OnInit {
   @Input() hus!: Hu[];
+  @Input() app!: App;
+  public modules: Module[]=[];
+
+  public hu:string = '';
+  public module: number = 0;
+
+  constructor(private moduleService: ModuleService){}
 
   ngOnInit(): void {
-    console.log(this.hus)
-  
+    this.moduleService.getModules().subscribe(res=> this.modules = res)
   }
 }

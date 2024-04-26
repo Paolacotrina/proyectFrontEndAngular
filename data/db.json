@@ -1,4 +1,78 @@
 {
+  "supports": [
+    {
+      "id": "784",
+      "proyectName": "1",
+      "hu": [
+        {
+          "id": 1,
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros"
+        }
+      ],
+      "module": [
+        {
+          "id": 1,
+          "description": "Panel de control"
+        }
+      ],
+      "date": "2024-04-12T16:28:14.071Z",
+      "stageRequest": [
+        {
+          "id": 1,
+          "description": "Abierta"
+        }
+      ],
+      "detail": "generar error al ingresar al panel de control"
+    },
+    {
+      "id": "69",
+      "proyectName": "3",
+      "hu": [
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro"
+        }
+      ],
+      "module": [
+        {
+          "id": "2",
+          "description": "Informes"
+        }
+      ],
+      "date": "2024-04-25T21:56:31.929Z",
+      "stageRequest": [
+        {
+          "id": 2,
+          "description": "En contacto"
+        }
+      ],
+      "detail": "Pruebas"
+    },
+    {
+      "id": "19",
+      "proyectName": "Portal de créditos educativos",
+      "hu": [
+        {
+          "id": "3",
+          "description": "Recibir una confirmación por correo electrónico después de completar el registro"
+        }
+      ],
+      "module": [
+        {
+          "id": "1",
+          "description": "Panel de control"
+        }
+      ],
+      "date": "2024-04-25T21:58:51.677Z",
+      "stageRequest": [
+        {
+          "id": 2,
+          "description": "En contacto"
+        }
+      ],
+      "detail": "no recibo correo electronico"
+    }
+  ],
   "requests": [
     {
       "id": "274e",
@@ -131,6 +205,10 @@
     {
       "id": "5",
       "description": "Registro de datos"
+    },
+    {
+      "id": "98",
+      "description": "Perfil"
     }
   ],
   "apps": [
@@ -145,8 +223,8 @@
       ],
       "stage": [
         {
-          "id": 1,
-          "description": "Inicial"
+          "id": 3,
+          "description": "Pruebas"
         }
       ],
       "startDate": "2024-01-12",
@@ -159,7 +237,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -168,17 +245,17 @@
       "hu": [
         {
           "id": "1",
-          "description": "Acceder a un panel de control que me proporcione una vision general de suministros",
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros",
           "status": [
             {
-              "id": 1,
-              "description": "Inicial"
+              "id": 2,
+              "description": "Desarrollo"
             }
           ],
           "module": [
             {
-              "id": 1,
-              "description": "Panel de control"
+              "id": 2,
+              "description": "Informes"
             }
           ]
         },
@@ -248,11 +325,59 @@
         },
         {
           "id": "43",
-          "description": "uhu",
+          "description": "uhu cocoa",
+          "module": [
+            {
+              "id": 3,
+              "description": "Registro de usuarios"
+            }
+          ],
+          "status": [
+            {
+              "id": 3,
+              "description": "Pruebas"
+            }
+          ]
+        },
+        {
+          "id": "1",
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros",
           "module": [
             {
               "id": 2,
               "description": "Informes"
+            }
+          ],
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ]
+        },
+        {
+          "id": "1",
+          "description": "4- Acceder a un panel de control que me proporcione una vision general de suministros",
+          "module": [
+            {
+              "id": 2,
+              "description": "Informes"
+            }
+          ],
+          "status": [
+            {
+              "id": 2,
+              "description": "Desarrollo"
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "description": "Development",
+          "module": [
+            {
+              "id": 1,
+              "description": "Panel de control"
             }
           ],
           "status": [
@@ -275,8 +400,8 @@
       ],
       "stage": [
         {
-          "id": 1,
-          "description": "Inicial"
+          "id": 2,
+          "description": "Desarrollo"
         }
       ],
       "startDate": "2023-06-19",
@@ -289,7 +414,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -357,8 +481,8 @@
       ],
       "stage": [
         {
-          "id": 1,
-          "description": "Inicial"
+          "id": 2,
+          "description": "Desarrollo"
         }
       ],
       "startDate": "2023-06-19",
@@ -371,7 +495,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -439,8 +562,8 @@
       ],
       "stage": [
         {
-          "id": 1,
-          "description": "Inicial"
+          "id": 2,
+          "description": "Desarrollo"
         }
       ],
       "startDate": "2023-06-19",
@@ -453,7 +576,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -521,8 +643,8 @@
       ],
       "stage": [
         {
-          "id": 1,
-          "description": "Inicial"
+          "id": 2,
+          "description": "Desarrollo"
         }
       ],
       "startDate": "2023-06-19",
@@ -535,7 +657,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -617,7 +738,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -699,7 +819,6 @@
       ],
       "customer": [
         {
-          "id": 1,
           "name": "Jhon Doe",
           "email": "johndoe@miempresa.com",
           "phone": 3210236441
@@ -810,6 +929,22 @@
             {
               "id": 1,
               "description": "Panel de control"
+            }
+          ],
+          "status": [
+            {
+              "id": 1,
+              "description": "Inicial"
+            }
+          ]
+        },
+        {
+          "id": "69",
+          "description": "Adiciona Hu -- actualizada",
+          "module": [
+            {
+              "id": 3,
+              "description": "Registro de usuarios"
             }
           ],
           "status": [

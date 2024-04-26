@@ -15,8 +15,18 @@ import { NewAppComponent } from './pages/new-app/new-app.component';
 import { EditAppComponent } from './pages/edit-app/edit-app.component';
 import { HuAppComponent } from './pages/hu-app/hu-app.component';
 import { StatusComponent } from './components/status/status.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListRequestComponent } from './pages/list-request/list-request.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ListSupportComponent } from './pages/list-support/list-support.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { TableFilterKeywordPipe } from './pipe/filter.pipe';
+import { TableFilterDatePipe } from './pipe/filter-date.pipe';
+import { TableFilterStagePipe } from './pipe/filter-status.pipe';
+import { TableFilterHuPipe } from './pipe/filter-hu.pipe';
+import { TableFilterModulePipe } from './pipe/filter-module.pipe';
+import { TableFilterProyectPipe } from './pipe/filter-proyect.pipe';
+import { TableFilterCustomerPipe } from './pipe/filter-customer.pipe';
 
 
 @NgModule({
@@ -34,12 +44,23 @@ import { ListRequestComponent } from './pages/list-request/list-request.componen
     EditAppComponent,
     HuAppComponent,
     StatusComponent,
-    ListRequestComponent
+    ListRequestComponent,
+    ModalComponent,
+    ListSupportComponent,
+    DashboardComponent,
+    TableFilterKeywordPipe,
+    TableFilterDatePipe,
+    TableFilterStagePipe,
+    TableFilterHuPipe,
+    TableFilterModulePipe,
+    TableFilterProyectPipe,
+    TableFilterCustomerPipe
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MainModule { }

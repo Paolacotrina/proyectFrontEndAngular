@@ -46,6 +46,21 @@ export interface Tecnology {
     description: string;
 }
 
+export interface AppSelect {
+    id:          number;
+    name: string;
+}
+
+export interface HuSelect {
+    id:          string;
+    description: string;
+}
+
+export interface ModuleSelect {
+    id:          string;
+    description: string;
+}
+
 export interface Requests{
     id?: number;
     nameCustomer:  string,
@@ -54,5 +69,15 @@ export interface Requests{
     phone: number,
     date?: Date,
     state: StageRequest[]
+}
+
+export interface Support{
+    id: number;
+    proyectName:  string,
+    hu: HuSelect[],
+    module: ModuleSelect[],
+    date?: Date,
+    stageRequest: StageRequest[];
+    detail: string;
 }
 

@@ -9,6 +9,8 @@ import { NewAppComponent } from './pages/new-app/new-app.component';
 import { EditAppComponent } from './pages/edit-app/edit-app.component';
 import { HuAppComponent } from './pages/hu-app/hu-app.component';
 import { ListRequestComponent } from './pages/list-request/list-request.component';
+import { ListSupportComponent } from './pages/list-support/list-support.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,8 @@ const routes: Routes = [
       { path: 'soporte', component: SupportComponent},
       { path: 'listApp', component: ListAppComponent },
       { path: 'listRequest', component: ListRequestComponent },
+      { path: 'listSupport', component: ListSupportComponent },
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'aplicacion/:id', component: NewAppComponent },
       { path: 'editar/:id', component: EditAppComponent },
       { path: 'hu/:id', component: HuAppComponent },
