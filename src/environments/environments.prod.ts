@@ -1,3 +1,3 @@
 export const environments = {
-    baseUrl: 'https://paola-cotrina/api'
+    baseUrl: 'https://apitestfrontend.onrender.com/'
 }

@@ -81,3 +81,11 @@ export interface Support{
     detail: string;
 }
 
+export interface Contact {
+    id:   number;
+    proyectName: string;
+    email: string;
+    date: Date;
+    state: Stage[];
+    message: string;
+}

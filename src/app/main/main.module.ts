@@ -27,6 +27,8 @@ import { TableFilterHuPipe } from './pipe/filter-hu.pipe';
 import { TableFilterModulePipe } from './pipe/filter-module.pipe';
 import { TableFilterProyectPipe } from './pipe/filter-proyect.pipe';
 import { TableFilterCustomerPipe } from './pipe/filter-customer.pipe';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ListContactComponent } from './pages/list-contact/list-contact.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { TableFilterCustomerPipe } from './pipe/filter-customer.pipe';
     TableFilterHuPipe,
     TableFilterModulePipe,
     TableFilterProyectPipe,
-    TableFilterCustomerPipe
+    TableFilterCustomerPipe,
+    ContactComponent,
+    ListContactComponent
   ],
   imports: [
     CommonModule,

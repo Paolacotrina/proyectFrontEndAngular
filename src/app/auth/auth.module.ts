@@ -6,6 +6,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ContactService } from '../../../main/services/contact.service';
-import { Contact } from '../../../main/interfaces/app.interface';
+import { Contact } from '../../interfaces/app.interface';
+import { ContactService } from '../../services/contact.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.css'
 })
-export class HomeComponent {
+export class ContactComponent {
+
   public messageForm: boolean = false;
   public contactform = new FormGroup({
     name: new FormControl(''),
@@ -54,6 +55,4 @@ export class HomeComponent {
     )
     return;
   }
-
-  
 }
