@@ -1,3 +1,3 @@
 export const environments = {
-    baseUrl: 'https://apitestfrontend.onrender.com/'
+    baseUrl: 'https://apitestfrontend.onrender.com'
 }
