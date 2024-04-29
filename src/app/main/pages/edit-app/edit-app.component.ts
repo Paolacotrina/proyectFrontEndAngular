@@ -15,6 +15,8 @@ export class EditAppComponent implements OnInit{
   public modules: Module[]=[];
   public app?: App;
   public message: boolean = false;
+  public role : number = 0;
+  public roleAdmin: boolean = false;
 
   public huForm = new FormGroup({
     hu: new FormControl(''),
@@ -26,16 +28,19 @@ export class EditAppComponent implements OnInit{
     private appsService: AppsService,
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ){}
+  ){
+    this.role = Number(localStorage.getItem("rol")) ?? 0;
+    this.role == 1 ? this.roleAdmin = true : this.roleAdmin = false;
+  }
 
   ngOnInit(): void {
-
+    
     this.activatedRoute.params
     .pipe(
       switchMap( ({id})=> this.appsService.getAppsById( id) )
     )
     .subscribe( app => {
-      // if(!app) return this.router.navigate(['/main/listApp']);
+       if(!app) return this.router.navigate(['/main/listApp']);
        this.app = app;
        
        return;
@@ -47,7 +52,7 @@ export class EditAppComponent implements OnInit{
   }
 
   get currentHu(): Hu {
-    console.log(this.app)
+  
     const hu = this.huForm.value.hu ?? '';
     const moduloId = this.huForm.value.modulo ?? '';
     const moduloDesc = this.modules.find(option => option.id == Number(moduloId))?.description ?? '';

@@ -77,8 +77,6 @@ export class ModalComponent implements OnInit{
 
     if (this.app) {
       this.currentHu;
-      console.log(this.app)
-      
       this.appService.updateApp(this.app).subscribe(updatedApp => {
         this.displayStyle = "none"; 
         setTimeout(() => {

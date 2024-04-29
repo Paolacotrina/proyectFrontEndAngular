@@ -2,7 +2,7 @@
     <h4 class="border-bottom border-info col-md-6 p-2">Solicitudes / Registrar datos básicos</h4>
       <div class="col-12 col-lg-12 p-1">
         <div class="bg-accent shadow rounded overflow-hidden">
-          <form [formGroup]="appForm" (ngSubmit)="onSubmit()">
+          <form [formGroup]="appForm" (ngSubmit)="onSubmit()" style="background-color: #f0fbff">
             <div class="row gy-4 gy-xl-5  p-xl-5 border border-info">
                 <div class="col-md-2">
                     <label class="h6">Nombre del proyecto*:</label>
@@ -141,8 +141,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="card col-md-5 p-5 mt-2 rounded border border-info">
-                <form [formGroup]="appModule" (ngSubmit)="onSubmitModule()">
+            <div class="card col-md-5 p-5 mt-2 rounded border border-none" style="background-color: #f0fbff">
+                <form [formGroup]="appModule" (ngSubmit)="onSubmitModule()" >
                     <h6>Crear módulo</h6>
                     <div class="col-md-12">
                         <label class="h6">Nombre del módulo*:</label>

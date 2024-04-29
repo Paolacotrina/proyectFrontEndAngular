@@ -1,9 +1,11 @@
 <div class="container">
     <div class="row">
+      <h4 class="border-bottom border-info col-md-6 p-2">Informes</h4>
         <div class="col-md-8">
             <div class="row gy-4 gy-md-5 gy-lg-0">
-                <h4 class="border-bottom border-info col-md-6 p-2">Mis aplicaciones</h4>
-                  <div class="col-12 col-lg-12 mt-5">
+              
+                  <div class="col-12 col-lg-12 m-2">
+                    <p class="h5" style="color: #077294;">Listado de aplicaciones</p>
                     <table class="table table-sm">
                         <thead>
                           <tr>
@@ -34,12 +36,15 @@
         </div>
         
         <div class="col-md-4 justify-content-center align-items-center" style="height: 100vh;">
-            <div class="outer-div mt-2">
+            <div class="outer-div m-2">
                 <div class="inner-div text-center">
+                  
                 <div class="chart-container">
+                  <p class="h5" style="color: #077294;">Aplicaciones por estado</p>
                     <canvas  id="chartDonut" >{{ chartDonut }}</canvas>
                 </div> 
                 <div class="chart-container">
+                  <p class="h5" style="color: #077294;">Aplicaciones por tecnologia</p>
                     <canvas  id="chartDonutTechnology" >{{ chartDonut }}</canvas>
                 </div>
                 </div>
@@ -50,6 +55,7 @@
         
         <div class="col-md-12">
             <div class="chart-container">
+              <p class="h5" style="color: #077294;">Aplicaciones por estado de las solicitudes de soporte</p>
                 <canvas  id="MyChart" >{{ chart }}</canvas>
             </div>
         </div>

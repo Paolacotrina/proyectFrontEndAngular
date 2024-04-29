@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit{
   }
 
   createChartsTechnologyApps(){
-    console.log(this.apps)
+    
     const countApplicationsByTechnology = (apps: any[]): { [state: string]: number } => {
       const technologyCounts: { [state: string]: number } = {};
   

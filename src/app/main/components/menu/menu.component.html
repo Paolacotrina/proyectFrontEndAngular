@@ -1,8 +1,8 @@
 
     <div class="d-flex flex-column p-3 h-100" style="background-color: #f2f2f2;" >
         <ul class="nav nav-pills flex-column mb-auto text-secondary">
-        <li class="border-bottom border-info">
-            <a routerLink="/main/tecnologia" class="nav-link text-dark ">
+        <li class="border-bottom border-info" >
+            <a routerLink="/main/technology" class="nav-link text-dark ">
             <strong>Tecnologías</strong> 
             </a>
         </li>
@@ -11,23 +11,43 @@
                 <strong>Mis aplicaciones</strong> 
             </a>
         </li>
-        <li class="border-bottom border-info">
-            <a routerLink="/main/solicitudes" class="nav-link text-dark">
+        <li class="border-bottom border-info" *ngIf="roleUser">
+            <a routerLink="/main/request" class="nav-link text-dark">
+                <strong>Solicitudes </strong> 
+            </a>
+        </li>
+        <li class="border-bottom border-info" *ngIf="roleAdmin">
+            <a routerLink="/main/listRequest" class="nav-link text-dark">
                 <strong>Solicitudes</strong> 
             </a>
         </li>
-        <li class="border-bottom border-info">
-            <a routerLink="/main/soporte" class="nav-link text-dark">
+        <li class="border-bottom border-info" *ngIf="roleUser">
+            <a routerLink="/main/support" class="nav-link text-dark">
                 <strong>Soporte</strong> 
+            </a>
+        </li>
+        <li class="border-bottom border-info" *ngIf="roleAdmin">
+            <a routerLink="/main/listSupport" class="nav-link text-dark">
+                <strong>Soporte</strong> 
+            </a>
+        </li>
+        <li class="border-bottom border-info" *ngIf="roleAdmin">
+            <a routerLink="/main/listContact" class="nav-link text-dark">
+                <strong>Contacto</strong> 
             </a>
         </li>
         </ul>
         <div class="mt-3">
             <ul class="nav nav-pills flex-column mb-auto">
                
-                <li class="border-bottom border-info">
-                    <a routerLink="#" class="nav-link text-dark">
+                <li class="border-bottom border-info" *ngIf="roleUser">
+                    <a routerLink="/main/contact" class="nav-link text-dark">
                         <strong>Contacto</strong> 
+                    </a>
+                </li>
+                <li class="border-bottom border-info" *ngIf="roleAdmin">
+                    <a routerLink="/main/dashboard" class="nav-link text-dark">
+                        <strong>Informes</strong> 
                     </a>
                 </li>
             </ul>

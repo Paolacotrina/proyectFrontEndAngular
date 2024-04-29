@@ -18,15 +18,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8 col-md-6 p-3">
+            <div class="col-xl-6 col-md-6 p-3">
                 <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Desarrollo a la medida</div>
             </div>
-            <div class="col-xl-2 col-md-4 p-3">
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                    <p class="nav justify-contend">
-                        John Doe
-                       
+            <div class="col-xl-4 col-md-4 p-3">
+                <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800" style="text-align: right;">
+                    <p class="h6">
+                        {{nameRole}} : {{user}}
                     </p>
+                    <button class="btn btn-light" (click)="logout()">
+                        <svg width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1L8 1V2L2 2L2 13H8V14H1L1 1ZM10.8536 4.14645L14.1932 7.48614L10.8674 11.0891L10.1326 10.4109L12.358 8L4 8V7L12.2929 7L10.1464 4.85355L10.8536 4.14645Z" fill="#000000"/>
+                        </svg> Cerrar sesion
+                    </button>
+                    
                 </div>
             </div>
         </nav>

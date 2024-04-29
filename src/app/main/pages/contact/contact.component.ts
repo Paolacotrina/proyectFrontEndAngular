@@ -12,8 +12,8 @@ export class ContactComponent {
 
   public messageForm: boolean = false;
   public contactform = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
+    name: new FormControl(localStorage.getItem("user")),
+    email: new FormControl(localStorage.getItem("email")),
     message : new FormControl('')
   })
 

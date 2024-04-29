@@ -31,7 +31,7 @@ const routes: Routes = [
       { path: 'app/:id', component: NewAppComponent },
       { path: 'editar/:id', component: EditAppComponent },
       { path: 'hu/:id', component: HuAppComponent },
-      { path: '**', redirectTo: 'tecnologia' }
+      { path: '**', redirectTo: 'technology' }
     ]
   }
 ];

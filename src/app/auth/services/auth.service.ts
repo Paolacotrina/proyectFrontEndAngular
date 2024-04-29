@@ -12,17 +12,21 @@ export class AuthService {
 
     constructor(private http: HttpClient) { }
 
-    get currentUser(): User|undefined {
-        if(!this.user) return undefined;
-        return structuredClone(this.user);
-    }
+    getUsers():Observable<User[]>{
+        return this.http.get<User[]>(`${this.baseUrl}/users`);
+   }
 
-    login (email: string, password: string):Observable<User>{
-        return this.http.get<User>(`${this.baseUrl}/users/a09e`)
+   getAppsById(id: string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/users/${id}`)
         .pipe(
-            tap( user => this.user = user),
-            tap(user => localStorage.setItem('token',user.id))
+            tap(user => localStorage.setItem('token',user.id)),
+            tap(user => localStorage.setItem('email',user.email)),
+            tap(user => localStorage.setItem('user',user.user)),
+            tap(user => localStorage.setItem('rol',user.role))
         )
     }
-    
+
+    addUser(user: User): Observable<User>{
+        return this.http.post<User>(`${this.baseUrl}/users`, user)
+    }
 }

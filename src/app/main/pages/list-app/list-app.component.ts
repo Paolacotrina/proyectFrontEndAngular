@@ -16,17 +16,27 @@ export class ListAppComponent implements OnInit {
   public customer: string = ''; 
   public customers: any[]=[];
   public customerSet: Set<string> = new Set(); 
+  public role : number = 0;
+  public roleAdmin: boolean = false;
 
   constructor(
     private appsService: AppsService,
     private stageService: StageService
   ){
-
+    this.role = Number(localStorage.getItem("rol")) ?? 0;
+    this.role == 1 ? this.roleAdmin = true : this.roleAdmin = false;
   }
+
   ngOnInit(): void {
     this.appsService.getApps().subscribe( apps => 
       {
-        this.apps = apps;
+        if(this.role == 1){
+          this.apps = apps;
+        }
+        else{
+          this.apps = apps.filter(item => item.customer[0].email == localStorage.getItem("email"))
+        }
+        
         this.apps.forEach(app => {
           app.customer.forEach(customer => {
             if (!this.customerSet.has(customer.name)) { // Verificar si el nombre ya está en el conjunto
@@ -35,7 +45,6 @@ export class ListAppComponent implements OnInit {
           }
           });
         });
-        console.log(this.customers)
       }
       
     );
@@ -43,7 +52,7 @@ export class ListAppComponent implements OnInit {
 
   updateStatus(app: App): void{
     const status = app.stage[0].id + 1;
-    console.log(app);
+    
     this.stageService.getStageById(status).subscribe( 
       res => {
         app.stage = [{id: Number(res?.id), description: res?.description}];

@@ -1,11 +1,11 @@
 <div class="row gy-4 gy-md-5 gy-lg-0">
     <h4 class="border-bottom border-info col-md-2 p-2">Solicitudes</h4>
-      <div class="col-12 col-lg-12 p-5">
+      <div class="col-12 col-lg-12 p-3">
         <h6>Formulario de solicitud de desarrollo a la medida</h6>
         <p>Ingrese los datos básicos del proyecto y uno de nuestros expertos se contactará con usted.</p>
-        <div class="bg-accent shadow rounded overflow-hidden">
+        <div class="bg-accent shadow rounded overflow-hidden"  style="background-color: #f0fbff">
           <form [formGroup]="requestform" (ngSubmit)="onSubmit()">
-            <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+            <div class="row gy-4 gy-xl-5  p-xl-5">
                 <div class="col-md-3 text-right">
                     <strong>Nombre completo o razon social</strong>
                 </div>
@@ -15,6 +15,7 @@
                     class="form-control" 
                     required 
                     formControlName="nameCustomer"
+                    readonly
                     >
                 </div>
                 <div class="col-md-3 text-left">
@@ -26,6 +27,7 @@
                     class="form-control" 
                     required 
                     formControlName="emailCustomer"
+                    readonly
                     >
                 </div>
                 <div class="col-3">
@@ -51,10 +53,8 @@
                     >
                 </div>
                 
-                <div class="col-md-12 d-flex justify-content-center align-items-center">
-                    <div class="d-grid p-3">
-                        <button class="btn btn-info text-light " type="submit">Enviar solicitud</button>
-                    </div>
+                <div style="text-align: right;">
+                    <button class="btn btn-info btn-sm btn-block text-light" type="submit" style="width: 75%; ">Enviar solicitud</button>
                 </div>
             </div>
           </form>

@@ -5,7 +5,7 @@
   ">
       <div class="col-12 col-lg-12 p-5">
         <div class="bg-accent shadow rounded overflow-hidden bg-black text-light">
-          <form action="#!">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
               <h1 class="p-3">Registro</h1>
               <div class="col-6">
@@ -13,9 +13,7 @@
                 <input 
                 type="text" 
                 class="form-control" 
-                id="fullname" 
-                name="fullname" 
-                value="" 
+                formControlName="name"
                 required 
                 >
               </div>
@@ -24,21 +22,17 @@
                 <input 
                 type="text" 
                 class="form-control" 
-                id="fullname" 
-                name="fullname" 
-                value="" 
+                formControlName="email"
                 required >
               </div>
               <div class="col-6">
                 <label class="h5">Contraseña</label>
-                    <input 
-                    type="password" 
-                    class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
-                    required 
-                    >
+                  <input 
+                  type="password" 
+                  class="form-control" 
+                  formControlName="password"
+                  required 
+                  >
               </div>
               
               <div class="col-6">
@@ -48,7 +42,9 @@
               </div>
             </div>
           </form>
-
+          <div *ngIf="message" class="alert alert-success" role="alert">
+            Usuario registrado
+          </div>
         </div>
       </div>
     </div>

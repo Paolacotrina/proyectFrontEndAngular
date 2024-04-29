@@ -5,7 +5,7 @@
   ">
       <div class="col-12 col-lg-6">
         <div class="bg-accent shadow rounded overflow-hidden bg-black text-light">
-          <form action="#!">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                 <h1 class="p-3">Inicio de sesión</h1>
               <div class="col-12">
@@ -13,9 +13,7 @@
                 <input 
                 type="text" 
                 class="form-control" 
-                id="fullname" 
-                name="fullname" 
-                value="" 
+                formControlName="email"
                 required >
               </div>
               <div class="col-12">
@@ -23,21 +21,21 @@
                     <input 
                     type="password" 
                     class="form-control" 
-                    id="fullname" 
-                    name="fullname" 
-                    value="" 
+                    formControlName="password"
                     required 
                     >
               </div>
               
               <div class="col-12">
                 <div class="d-grid">
-                  <button class="btn btn-primary btn-lg" type="submit" (click)="onLogin()">Ingresar</button>
+                  <button class="btn btn-primary btn-lg" type="submit">Ingresar</button>
                 </div>
               </div>
             </div>
           </form>
-
+          <div *ngIf="message" class="alert alert-success" role="alert">
+            Usuario no encontrado
+          </div>
         </div>
       </div>
     </div>

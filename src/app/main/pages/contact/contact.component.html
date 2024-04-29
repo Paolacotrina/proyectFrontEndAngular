@@ -53,7 +53,7 @@
         </div>
         
       <div class="col-md-7 col-lg-7 p-2">
-        <div class="bg-accent shadow rounded overflow-hidden" style="background-color: #d6f4fe">
+        <div class="bg-accent shadow rounded overflow-hidden" style="background-color: #f0fbff">
 
             <form [formGroup]="contactform" (ngSubmit)="onSubmit()">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
@@ -63,7 +63,9 @@
                 class="form-control" 
                 required 
                 formControlName="name"
-                placeholder="Nombre completo o razon social">
+                placeholder="Nombre completo o razon social"
+                readonly
+                >
               </div>
               <div class="col-12">
                 <div class="input-group">
@@ -73,6 +75,7 @@
                   required 
                   formControlName="email"
                   placeholder="Correo electronico"
+                  readonly
                   >
                 </div>
               </div>
@@ -86,7 +89,7 @@
               </div>
               <div class="col-12">
                 <div class="d-grid">
-                  <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+                  <button class="btn btn-info text-light" type="submit">Enviar mensaje</button>
                 </div>
               </div>
             </div>

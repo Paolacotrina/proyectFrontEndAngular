@@ -4,39 +4,39 @@
     </ng-template>
     <div  *ngIf="app; else divLoading"> 
         <div class="row">
-            <h4 class="border-bottom border-info col-md-7 p-2">Aplicaciones / {{app.name}}</h4>
-            <div class="col-md-5">
+            <h4 class="border-bottom border-info col-md-10 p-2">Aplicaciones / {{app.name}}</h4>
+            <div class="col-md-2">
                <app-status [stage]="app.stage"></app-status>
             </div>
         </div>
         
         <div class="col-12 col-lg-12">
-            <div class="bg-accent shadow rounded overflow-hidden">
-                    <div class="d-flex flex-row">
-                        <div class="p-2 d-flex flex-row col-md-4">
-                            <app-image-technology [idTecnology]="1" class="ml-2"></app-image-technology>
-                            &nbsp; {{app.name}}
-                        </div>
-                        <div class="p-2 ">
-                            <p>
-                                <strong>Cliente:</strong>&nbsp;{{app.customer[0].name}}
-                            </p>
-                        </div>
-                        <div class="p-2 ">
-                            <p>
-                                <strong>Fecha inicio:</strong>&nbsp; {{app.startDate}}
-                            </p>
-                        </div>
-                        <div class="p-2 ">
-                            <p>
-                                <strong>Fecha fin: </strong>&nbsp; {{app.end}}
-                            </p>
-                        </div>
+            
+            <div class="d-flex flex-row" *ngIf="roleAdmin">
+                <div class="p-2 d-flex flex-row col-md-4">
+                    <app-image-technology [idTecnology]="1" class="ml-2"></app-image-technology>
+                    &nbsp; {{app.name}}
                 </div>
+                <div class="p-2 ">
+                    <p>
+                        <strong>Cliente:</strong>&nbsp;{{app.customer[0].name}}
+                    </p>
+                </div>
+                <div class="p-2 ">
+                    <p>
+                        <strong>Fecha inicio:</strong>&nbsp; {{app.startDate}}
+                    </p>
+                </div>
+                <div class="p-2 ">
+                    <p>
+                        <strong>Fecha fin: </strong>&nbsp; {{app.end}}
+                    </p>
+                </div>
+            </div>
 
-                
+        <div class="bg-accent shadow rounded overflow-hidden" style="background-color: #f0fbff" *ngIf="roleAdmin">   
             <form [formGroup]="huForm" (ngSubmit)="onSubmit()">
-                <div class="row gy-4 gy-xl-5  p-xl-5 ">
+                <div class="row gy-4 gy-xl-5  p-xl-5 row">
                     <div class="col-md-2">
                         <label class="h6">Historia de usuario:</label>
                     </div>

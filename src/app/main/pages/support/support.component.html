@@ -1,9 +1,9 @@
 <div class="row gy-4 gy-md-5 gy-lg-0">
     <h4 class="border-bottom border-info col-md-2 p-2">Soporte</h4>
-      <div class="col-12 col-lg-12 p-5">
+      <div class="col-12 col-lg-12 p-3">
         <h6>Formulario de solicitud de soporte</h6>
         <p>Ingrese los datos relacionaos a la aplicacion la cual necesita soporte.</p>
-        <div class="bg-accent shadow rounded overflow-hidden">
+        <div class="bg-accent shadow rounded overflow-hidden" style="background-color: #f0fbff; border: none;">
             <form [formGroup]="supportForm" (ngSubmit)="onSubmit()">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                 <div class="col-md-3">
@@ -73,11 +73,11 @@
                     
                 </div>
                 
-                <div class="col-md-12 d-flex justify-content-center align-items-center">
-                    <div class="d-grid p-3">
-                        <button class="btn btn-info text-light w-100" type="submit">Enviar solicitud</button>
-                    </div>
+                <div style="text-align: right;">
+                    <button class="btn btn-info btn-sm btn-block text-light" type="submit" style="width: 75%; ">Enviar solicitud</button>
                 </div>
+                    
+                
             </div>
           </form>
           <div *ngIf="message" class="alert alert-success" role="alert">

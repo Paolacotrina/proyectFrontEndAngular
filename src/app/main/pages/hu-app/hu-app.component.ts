@@ -14,8 +14,13 @@ export class HuAppComponent implements OnInit {
 
   public hu:string = '';
   public module: number = 0;
+  public role : number = 0;
+  public roleAdmin: boolean = false;
 
-  constructor(private moduleService: ModuleService){}
+  constructor(private moduleService: ModuleService){
+    this.role = Number(localStorage.getItem("rol")) ?? 0;
+    this.role == 1 ? this.roleAdmin = true : this.roleAdmin = false;
+  }
 
   ngOnInit(): void {
     this.moduleService.getModules().subscribe(res=> this.modules = res)

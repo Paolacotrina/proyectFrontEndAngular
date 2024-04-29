@@ -15,7 +15,6 @@ export class StatusComponent implements OnChanges  {
   ngOnChanges(): void  {
     this.descripcion = this.stage[0].description;
 
-    console.log("s")
     
     switch(this.stage[0].id){
       case 1:

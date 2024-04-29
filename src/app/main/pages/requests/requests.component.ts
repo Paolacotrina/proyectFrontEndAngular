@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Requests } from '../../interfaces/app.interface';
 import { RequestService } from '../../services/request.service';
@@ -8,19 +8,20 @@ import { RequestService } from '../../services/request.service';
   templateUrl: './requests.component.html',
   styleUrl: './requests.component.css'
 })
-export class RequestsComponent {
+export class RequestsComponent{
 
   public message: boolean = false;
 
   public requestform = new FormGroup({
-    nameCustomer: new FormControl(''),
-    emailCustomer: new FormControl(''),
+    nameCustomer: new FormControl(localStorage.getItem("user")),
+    emailCustomer: new FormControl(localStorage.getItem("email")),
     nameProyect : new FormControl(''),
     phone: new FormControl(0)
   })
 
   constructor( private requestService: RequestService){}
 
+ 
   get currentRequest(): Requests {
     const nameCustomer= this.requestform.value.nameCustomer ?? '';
     const email= this.requestform.value.emailCustomer ?? '';

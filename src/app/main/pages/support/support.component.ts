@@ -33,7 +33,7 @@ export class SupportComponent implements OnInit {
   ngOnInit(): void {
     this.appsService.getApps().subscribe(
       res => {
-        this.app = res.filter(data=> data.customer[0].email == 'johndoe@miempresa.com')
+        this.app = res.filter(data=> data.customer[0].email == localStorage.getItem("email"))
       });
       this.viewModule();
       this.viewHu();
@@ -69,7 +69,7 @@ export class SupportComponent implements OnInit {
           
           if (res?.hu) {
             this.hus= res?.hu.filter(hu => hu.module.some(m => m.id === 2));
-            console.log(this.hus)
+           
           }
         })
       });

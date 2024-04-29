@@ -1,6 +1,6 @@
 
 <div class="row gy-4 gy-md-5 gy-lg-0">
-    <h4 class="border-bottom border-info col-md-6 p-2">Mis aplicaciones</h4>
+    <h4 class="border-bottom border-info col-md-6 p-2">Soporte</h4>
       <div class="col-md-12 col-lg-12 mt-5">
         <div class="row p-2 mb-2">
             <div class="col-md-1">
@@ -53,85 +53,91 @@
             </tbody>
           </table>
       </div>
-      <div class="card m-2" *ngIf="support" style="background-color: #f0fbff; border: none;">
+      <div class="card " *ngIf="support" style="background-color: #f0fbff; border: none;">
         <div class="row p-2">
-            <div class="d-flex flex-row">
-                <div class="p-2 col-md-6 mt-5">
-                    <p>
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <ol class="list-inline">
+                      <li class="list-inline-item p-2">
                         <strong>Nombre del proyecto:</strong>&nbsp; {{support.proyectName}}
-                    </p>
-                </div>
-                <div class="p-2 col-md-3 mt-5">
-                    <p>
+                    </li>
+                      <li class="list-inline-item m-2">
                         <strong>Modulo:</strong>&nbsp; {{support.module[0].description}}
-                    </p>
-                </div>
-                <div class="p-2 col-md-3"  >
-                    <p><strong>Fecha </strong>&nbsp; {{support.date | date: 'dd-MM-yyyy hh:mm:ss'}}</p>
-                    <app-status [stage]="support.stageRequest"></app-status>
-                    
-                </div>
-            </div>
-        </div>
-        <div>
-            <form [formGroup]="supportForm" (ngSubmit)="onSubmit()" >
-                <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                    <div class="col-md-3">
-                        <label class="h6">Detalle de la HU:</label>
-                    </div>
-                    <div class="col-md-9">
-                        <textarea 
-                        class="form-control" 
-                        type="text" 
-                        required 
-                        formControlName="detailHu"
-                        readonly="true"
-                        ></textarea>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <label class="h6">Detalle de la solicitud:</label>
-                    </div>
-                    <div class="col-md-9">
-                        <textarea 
-                        class="form-control" 
-                        type="text" 
-                        required 
-                        formControlName="request"
-                        readonly="true"
-                        ></textarea>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <label class="h6">Cambiar estado*:</label>
-                    </div>
-                    <div class="col-md-4">
-                        <select 
-                        type="text" 
-                        class="form-select" 
-                        required 
-                        formControlName="status"
-                        >
-                        <option *ngFor="let state of stateRequests" [value]="state.id" >
-                            {{state.description}}
-                        </option>
-                        </select>
-                    </div>
-                    
-                    <div class="col-md-5" style="text-align: right;">
-                        <div class="row">
-                          <div class="col">
-                            <button class="btn btn-info btn-block text-light">   Guardar   </button>
-                          </div>
+                      </li>
+                      <li class="list-inline-item " >
+                        <div style="text-align: right">
+                            <p>
+                                &nbsp;&nbsp; <strong>Fecha </strong>&nbsp; {{support.date | date: 'dd-MM-yyyy hh:mm:ss'}}
+                                <app-status [stage]="support.stageRequest"></app-status>
+                            </p>
                         </div>
-                      </div>
-                    
+                      </li>
+                    </ol>
+                  </div>
                 </div>
-            </form>
-            <div *ngIf="message" class="alert alert-success" role="alert">
-            Solicitud de soporte enviada correctamente
+              </div>
+              <div>
+                <form [formGroup]="supportForm" (ngSubmit)="onSubmit()" >
+                    <div class="row gy-4 gy-xl-5 p-xl-5">
+                        <div class="col-md-3">
+                            <label class="h6">Detalle de la HU {{support.hu[0].id }}:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <textarea 
+                            class="form-control" 
+                            type="text" 
+                            required 
+                            formControlName="detailHu"
+                            readonly="true"
+                            ></textarea>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <label class="h6">Detalle de la solicitud:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <textarea 
+                            class="form-control" 
+                            type="text" 
+                            required 
+                            formControlName="request"
+                            readonly="true"
+                            ></textarea>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <label class="h6">Cambiar estado*:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select 
+                            type="text" 
+                            class="form-select" 
+                            required 
+                            formControlName="status"
+                            >
+                            <option *ngFor="let state of stateRequests" [value]="state.id" >
+                                {{state.description}}
+                            </option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-5" style="text-align: right;">
+                            <div class="row">
+                              <div class="col">
+                                <button class="btn btn-info btn-block text-light">  &nbsp;&nbsp; &nbsp;&nbsp;  Guardar  &nbsp;&nbsp;  &nbsp;&nbsp; </button>
+                              </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                </form>
+                <div *ngIf="message" class="alert alert-success" role="alert">
+                Solicitud de soporte enviada correctamente
+                </div>
             </div>
         </div>
+        
         
 
       </div>

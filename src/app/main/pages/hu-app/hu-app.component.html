@@ -34,7 +34,7 @@
                 <th scope="col" class="width: 20%">Historia de usuario</th>
                 <th scope="col">Modulo</th>
                 <th scope="col">Estado</th>
-                <th scope="col">Editar</th>
+                <th scope="col" *ngIf="roleAdmin">Editar</th>
               </tr>
             </thead>
             <tbody>
@@ -43,8 +43,7 @@
                 <td>{{hu.description}}</td>
                 <td>{{hu.module[0].description}}</td>
                 <td><app-status [stage]="hu.status"></app-status></td>
-                <td>
-                 
+                <td *ngIf="roleAdmin">
                    <app-modal [myHu]="hu" [app]="app"></app-modal>
                 </td>
               </tr>

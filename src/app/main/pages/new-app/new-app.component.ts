@@ -175,7 +175,7 @@ export class NewAppComponent implements OnInit{
     this.requestService.updateRequest(this.currentRequest)
     .subscribe(
       req=>{
-        console.log("Actualice");
+        
         this.messageRequest = true;
         this.appForm.reset();
         setTimeout(() => {
